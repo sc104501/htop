@@ -37,6 +37,7 @@ jobs:
         upload_url: ${{ github.event.release.upload_url }}
         asset_path: ./htop
         asset_name: htop
+        asset_content_type: application/octet-stream
 
     - name: archive
       id: archive
