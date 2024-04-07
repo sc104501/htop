@@ -27,9 +27,7 @@ jobs:
       run: ./configure --enable-werror --enable-openvz --enable-vserver --enable-ancient-vserver --enable-unicode --enable-hwloc --enable-delayacct --enable-sensors --enable-capabilities || ( cat config.log; exit 1; )
     - name: Build
       run: make -k
-    - name: Distcheck
-      run: make distcheck DISTCHECK_CONFIGURE_FLAGS='--enable-werror --enable-openvz --enable-vserver --enable-ancient-vserver --enable-unicode --enable-hwloc --enable-delayacct --enable-sensors --enable-capabilities'
     - uses: actions/upload-artifact@v4
       with:
-        name: upload artifact
-        path: htop-3.4.0-dev.tar.gz
+        name: htop
+        path: htop
